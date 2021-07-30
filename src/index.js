@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//Sử dụng redux 
+import {Provider} from 'react-redux';
+import { store } from './redux/configStore'
+//Sử dụng antd
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less's
+//slick carousel
+// import "../node_modules/slick-carousel/slick/slick.css"; 
+// import "../node_modules/slick-carouse/slick/slick-theme.css";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Provider store={store}>
+      <App />
+    </Provider>,
   document.getElementById('root')
 );
 
